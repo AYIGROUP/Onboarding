@@ -1,0 +1,21 @@
+.container{
+    z-index: 3;
+    display: column;
+    justify-content:  flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 90vh;
+    margin: 0 auto;
+    position: fixed;
+}
+.container .chat{
+    height: 65%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

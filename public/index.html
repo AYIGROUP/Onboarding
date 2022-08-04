@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css"
+      integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="svg"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/bootstrap-icons.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>AYI Onboarding</title>
+  </head>
+  <body>
+    <div class="background" id="background">
+      <img src="assets/img/Chapon.png" alt="" />
+    </div>
+    <div class="background-scene-two" id="backgroundTwo">
+      <canvas id="stars"></canvas>
+    </div>
+    <div class="cards-container" id="cardsContainer">
+      <div class="card-window card1" id="leftCard">
+        <div class="cardContent">
+          <h3>Be Protagonist</h3>
+          <p>
+            Texto referente del portal Be Protagonist y lo que compete a la
+            solapa...
+          </p>
+          <button><a href="#">Ver Más</a></button>
+          <!-- <button class="info-button"i><a href="#">información</a></button> -->
+        </div>
+
+        <img src="./assets/img/Car1.png" alt="" />
+      </div>
+      <div class="middleCards" id="middleCards">
+        <div class="card-window card2">
+          <div class="cardContent">
+            <h3>Mi Billetera</h3>
+            <p>
+              Intereconomy es una solución de billetera digital desarrollada por
+              AYI GROUP.
+            </p>
+
+            <button><a href="#">Ver Más</a></button>
+          </div>
+          <img src="./assets/img/Car3.png" alt="" />
+        </div>
+        <div class="card-window card3">
+          <div class="cardContent">
+            <h3>Ayi Academy</h3>
+            <p>
+              Ver el programa y las caracteristicas del programa Ayi Academy...
+            </p>
+
+            <button><a href="#">Ver Más</a></button>
+          </div>
+          <img src="./assets/img/Car2.png" alt="" />
+        </div>
+        <div class="card-window card4">
+          <div class="cardContent">
+            <h3>Referidos</h3>
+            <p>
+              Programa de referidos y sus beneficios para vos y sus
+              caracteristicas...
+            </p>
+            <button><a href="#">Ver Más</a></button>
+          </div>
+          <img src="./assets/img/Car3.png" alt="" />
+        </div>
+      </div>
+      <div class="card-window card5" id="rightCard">
+        <div class="cardContent">
+          <h3>Comercial</h3>
+          <p>
+            Texto referente del portal Comercial y lo que compete a la solapa...
+          </p>
+          <button><a href="#">Ver Más</a></button>
+          <!-- <button class="info-button"i><a href="#">información</a></button> -->
+        </div>
+        <img src="./assets/img/Car1.png" alt="" />
+      </div>
+    </div>
+    <div
+      class="cards-container cards-container-buttons"
+      id="cardsContainerButton"
+    >
+      <div class="card-window card1" id="leftCardButton">
+        <div class="cardContent">
+          <h3>Be Protagonist</h3>
+          <p>
+            Texto referente del portal Be Protagonist y lo que compete a la
+            solapa...
+          </p>
+          <button onclick="detailScreen('Be Protagonist')">
+            <a href="#">Ver Más</a>
+          </button>
+          <!-- <button class="info-button-capa2"><a href="#">información</a></button> -->
+        </div>
+      </div>
+      <div class="middleCards" id="middleCardsButton">
+        <div class="card-window card2">
+          <div class="cardContent">
+            <h3>Mi Billetera</h3>
+            <p>
+              Intereconomy es una solución de billetera digital desarrollada por
+              AYI GROUP.
+            </p>
+            <button onclick="detailScreen('Mi Billetera')">
+              <a href="#">Ver Más</a>
+            </button>
+          </div>
+        </div>
+        <div class="card-window card3">
+          <div class="cardContent">
+            <h3>Ayi Academy</h3>
+            <p>
+              Ver el programa y las caracteristicas del programa Ayi Academy...
+            </p>
+            <button onclick="detailScreen('Ayi Academy')">
+              <a href="#">Ver Más</a>
+            </button>
+          </div>
+        </div>
+        <div class="card-window card4">
+          <div class="cardContent">
+            <h3>Referidos</h3>
+            <p>
+              Programa de referidos y sus beneficios para vos y sus
+              caracteristicas...
+            </p>
+            <button onclick="detailScreen('Referidos')">
+              <a href="#">Ver Más</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-window card5" id="rightCardButton">
+        <div class="cardContent">
+          <h3>Comercial</h3>
+          <p>
+            Texto referente del portal Comercial y lo que compete a la solapa...
+          </p>
+          <button onclick="detailScreen('Comercial')">
+            <a href="#">Ver Más</a>
+          </button>
+          <!-- <button class="info-button-capa2"><a href="#">información</a></button> -->
+        </div>
+      </div>
+    </div>
+    <!-- <a class="punto-ayi" id="puntoAyi">
+      <img src="assets/img/PuntoAyi.svg" alt="" />
+    </a> -->
+    <div class="bubble-chat hover" id="bubbleChat">
+      <button id="closeChat">
+        <i class="bi bi-x" id="closeChatChild"></i>
+      </button>
+      <img src="assets/img/CabezitaNull-E.png" id="nulleHead" alt="" />
+
+      <iframe
+        class="chat-iframe"
+        id="chatIframe"
+        src="chat/index2.html"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <div class="info hideSwipper" id="info">
+      <p id="infoP">Propósito AYI</p>
+      <div class="swiper mySwiper" id="swiperr">
+        <button id="closeSwiper" name="close">
+          <i class="bi bi-x" id="closeSwiperChild"></i>
+        </button>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <h3>Propósito AYI</h3>
+              <p>
+                Es un sentido colectivo de para qué hacemos lo que hacemos todos
+                los dias. Conecta el trabajo que realizan los colaboradores con
+                la razón por la que existe la organización y les permiten ver el
+                impacto directo del trabajo que están haciendo.
+              </p>
+              <p>
+                Talentos: "Atraer y fidelizar talentos comprometidos en lograr
+                su mayor Dontribución"
+              </p>
+              <p>
+                Cultura: Evolucionar la cultura Ayi para generar sentido de
+                pertenencia que hos identifique"
+              </p>
+              <p>
+                Tecnologia: "Tener la capacidad de identificar e implementar las
+                tecnologías más adecuadas para agregar valor al cliente."
+              </p>
+              <p>
+                Innovación: "Integrar productos propios y/o de terceros que le
+                leven soluciones innovadores a los clientes (actuales o
+                potenciales)
+              </p>
+              <p>
+                Negocio: "Potenciar clientes, soluciones (productos y servicios)
+                sin froteras
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/proposito-2.png" alt="" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/proposito-4.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/proposito-5.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/proposito-6.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/proposito-7.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-button-next swiper-button"></div>
+        <div class="swiper-button-prev swiper-button"></div>
+      </div>
+    </div>
+    <div class="razar" id="radar">
+      <div class="img-punto-ayi"><img src="assets/img/PuntoAyi.svg" alt=""></div>
+      <div class="ringbase ring1"></div>
+      <div class="ringbase ring2"></div>
+      <div class="pulse"></div>
+      <div class="pointer">
+        <div></div>
+      </div>
+      <div class="dot pos1"></div>
+      <div class="dot pos2"></div>
+      <div class="dot pos3"></div>
+      <div class="dot pos4"></div>
+      
+    </div>
+
+    <div class="rocket">
+      <img src="assets/img/Fondo-Index-Apagado.png" alt="" id="rocketImg" />
+    </div>
+    <div class="button-column" id="button-column">
+      <form class="login" id="login">
+        <input type="email" class="inputEmail" id="inputEmail" />
+        <p id="error">Email incorrecto.</p>
+        <button type="submit" class="start-button" id="startButton">
+          <p>Despeguemos!</p>
+        </button>
+      </form>
+    </div>
+    <div class="chair chair-left" id="chairLeft">
+      <img src="assets/img/Silla.png" alt="" />
+    </div>
+    <div class="chair chair-right" id="chairRight">
+      <img src="assets/img/Silla.png" alt="" />
+    </div>
+
+    <section class="detail-screen" id="detailScreenOne">
+      <img
+        src="assets/img/detail-screen.png"
+        class="detail-background"
+        alt=""
+      />
+
+      <div class="detail-content">
+        <div id="detailScreenHome" onclick="closeDetail()">
+          <img src="assets/img/detail-home.png" class="home-img" alt="" />
+        </div>
+
+        <div class="detail-text">
+          <div class="text-content">
+            <div class="background-scene-detail" id="backgroundDetail">
+              <canvas id="stars"></canvas>
+            </div>
+            <h3 id="detailTitle">Propósito AYI</h3>
+            <p>
+              Es un sentido colectivo de para qué hacemos lo que hacemos todos
+              los dias. Conecta el trabajo que realizan los colaboradores con la
+              razón por la que existe la organización y les permiten ver el
+              impacto directo del trabajo que están haciendo.
+            </p>
+            <p>
+              Talentos: "Atraer y fidelizar talentos comprometidos en lograr su
+              mayor Dontribución"
+            </p>
+            <p>
+              Cultura: Evolucionar la cultura Ayi para generar sentido de
+              pertenencia que hos identifique"
+            </p>
+            <p>
+              Tecnologia: "Tener la capacidad de identificar e implementar las
+              tecnologías más adecuadas para agregar valor al cliente."
+            </p>
+            <p>
+              Innovación: "Integrar productos propios y/o de terceros que le
+              leven soluciones innovadores a los clientes (actuales o
+              potenciales)
+            </p>
+            <p>
+              Negocio: "Potenciar clientes, soluciones (productos y servicios)
+              sin froteras
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div>
+        <a
+          href="https://app.interconomy.biz/auth/login/62698a76bcfdb546571582fd"
+          target="_blank"
+          class="interconomy"
+          ><img
+            src="assets/img/InterConomy.svg"
+            alt=""
+            srcset=""
+            class="interconomyImg"
+        /></a>
+        <a
+          href="https://sites.google.com/ayi-asociados.com/normas-iso-procesos/procesos-de-proyectoservicios?authuser=0"
+          target="_blank"
+          id="sp"
+          ><i class="bi bi-diagram-2-fill"></i
+        ></a>
+        <a
+          href="https://join.slack.com/t/ayiersespacio/shared_invite/zt-1byi8hvxz-~lA7SnRWW~y0CD3JdXN91g3"
+          target="_blank"
+          id="sk"
+          ><i class="bi bi-slack"></i
+        ></a>
+        <a
+          href="https://www.youtube.com/channel/UCVp79aoTmjW500iAkjRT9DA/featured"
+          target="_blank"
+          id="yt"
+          ><i class="bi bi-youtube"></i
+        ></a>
+        <a href="https://www.facebook.com/AYIGROUP" target="_blank" id="fb"
+          ><i class="bi bi-facebook"></i
+        ></a>
+        <a href="https://spoti.fi/3gN8ZBR" target="_blank" id="sp"
+          ><i class="bi bi-spotify"></i
+        ></a>
+        <a href="https://bit.ly/3kGBMbf" target="_blank" id="tw"
+          ><i class="bi bi-twitter"></i
+        ></a>
+        <a href="https://bit.ly/2LNodLG" target="_blank" id="lk"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <a
+          href="https://join.slack.com/t/ayiacademy/shared_invite/zt-1ctbdifnq-8eSy29mKTdaE~G29x5CE9Q"
+          target="_blank"
+          id="sk"
+          ><i class="bi bi-slack"></i
+        ></a>
+        <a
+          href="https://drive.google.com/drive/u/0/folders/10nimoBNbu4oaLSXYjmKANhU9jecEAH8c"
+          target="_blank"
+          class="interconomy"
+          ><i class="bi bi-info-circle-fill" id="infoA"></i
+        ></a>
+      </div>
+    </footer>
+    <iframe src="https://vkrkld.deta.dev/responder?texto=hola" height="400" width="800" name="demo">
+      <p>Su navegador no es compatible con iframes</p>
+    </iframe>
+    <script src="js/background.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <!-- Initialize Swiper -->
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

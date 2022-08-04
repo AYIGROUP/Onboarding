@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="chat.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</head>
+
+<body>
+  <div id="container" class="container">
+     
+    <div id="chat" class="chat">
+      <div id="messages" class="messages"> </div>
+      <div class="sendMessage">
+        <input class="inputMessage" id="input" type="text" placeholder="Pregúntame algo..." autocomplete="off" autofocus="true" />
+        <button class="button" type="submit" onclick="enviar()"><i class="bi bi-send-fill"></i>
+        </button>
+      </div>
+      
+      <!-- <br><button class="button" type="submit" onclick="finalizar()">Finalizar</button> -->
+      </div>
+      <div id="contact_form" class="contact_form" style="display:none; text-align: center;">
+        <h4>Puedes contarnos como te fue con Null-E y mandarnos un <img src="img/whatsapp.png" width="20px"
+            height="20px"></img></h4>
+        <a onclick="getChat()"><img src="img/emoji-carita-enojado.png" width="50px" height="50px"></a>
+        <a href="https://api.whatsapp.com/send?phone=543517734665&text=Hola, Quiero felicitar a Null-E!"><img
+            src='img/todobien.png' width='50px' height='50px'></a>
+        <br><button class="enlace" role="link" onclick="window.location='https://www.google.com'">Salir</button>
+      </div>
+  </div>
+  <script src="https://cdn.rawgit.com/BrainJS/brain.js/45ce6ffc/browser.js"></script>
+  <script src="compiledChatIA.js"></script>
+  
+</body>
+</html>
