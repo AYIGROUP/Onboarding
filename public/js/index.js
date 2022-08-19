@@ -152,6 +152,9 @@ function closeDetail(){ //Close "Ver Más" section when user click in Home icon
     puntoAyi.style.display = "flex";
 }
 
+radar.addEventListener('click', ()=>{
+    window.open("https://ayi-21895119.hubspotpagebuilder.com/punto.ayi", "blank")
+});
 
 
 

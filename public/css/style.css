@@ -382,7 +382,7 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  display: block;
+  display: none;
 }
 .detail-screen {
   z-index: 5;
@@ -400,7 +400,7 @@ p {
 }
 .detail-screen .detail-content {
   position: absolute;
-  z-index: 6;
+  z-index: 5;
   top: 5%;
   left: 5%;
   width: 42%;
@@ -421,29 +421,47 @@ p {
   transform: scale(1.1);
 }
 .detail-screen .detail-content .detail-text {
-  background-image: url("../assets/img/detail-card.png");
+  position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 90%;
+  width: 110%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 7;
+  
 }
 .detail-screen .detail-content .detail-text .text-content {
-  width: 80%;
+  width: 100%;
+  height: 70vh;
+  word-wrap: break-word ;
+  padding: 10px;
+  overflow-y: scroll;
+  
   color: var(--main-font-color);
   font-family: var(--main-font-family);
-  margin-left: -5%;
+ 
+  
+}
+.detail-screen .detail-content .detail-text .text-content::-webkit-scrollbar{
+  display: none;
 }
 .detail-screen .detail-content .detail-text .text-content h3 {
-  font-weight: normal;
+  font-weight: 20px;
+  margin-top: 25px;
 }
 .detail-screen .detail-content .detail-text .text-content p {
   margin: 3% 0;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 18px;
+}
+.detail-screen .detail-content .detail-text .text-content p span{
+  font-weight: bold;
+}
+.detail-screen .detail-content .detail-text .text-content span{
+  font-weight: bold;
 }
 /*End detail view styles "Ver más"*/
 
