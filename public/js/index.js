@@ -39,15 +39,26 @@ const radar = document.getElementById("radar");
 
 //window.open("https://vkrkld.deta.dev/responder?texto=hola", "_blank");
 TODO: "Create login service because this is extremely insecure."
-login.addEventListener("submit", (e)=>{ //Login
-    e.preventDefault();
-    if(validateEmail(inputEmail.value)){
-        changeScene();
-    }else{
-        login.style.animation = "shake 0.5s";
-        error.style.display = "block";
-    }
-});
+let session = localStorage.getItem('key');
+if(session){
+    console.log(session);
+    changeScene();
+    
+}else{
+    login.addEventListener("submit", (e)=>{ //Login
+        e.preventDefault();
+        if(validateEmail(inputEmail.value)){
+            changeScene();
+            localStorage.setItem('key', 'value');
+            session = localStorage.getItem('key');
+            console.log(session);
+        }else{
+            login.style.animation = "shake 0.5s";
+            error.style.display = "block";
+        }
+    });
+}
+
 
 function validateEmail(email){ //Validate if email contains "ayi.group"
     const validateEmail = String(email).substr(-9);
@@ -89,7 +100,7 @@ function changeScene(){ //Run animations when login as succsefully
         radar.style.display = "block";
     }, 2000);
     
-    console.log(radar)
+    
 
 }
 
