@@ -43,9 +43,8 @@ let session = localStorage.getItem('key');
 if(session){
     console.log(session);
     changeScene();
-    
 }else{
-    login.addEventListener("submit", (e)=>{ //Login
+    login.addEventListener("submit", (e)=>{ //Login and save session in local storage
         e.preventDefault();
         if(validateEmail(inputEmail.value)){
             changeScene();

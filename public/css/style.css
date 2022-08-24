@@ -481,12 +481,17 @@ footer {
 /*Footer icons*/
 footer div {
   height: 100%;
-  width: 35%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 30px;
-  margin-right: 5%;
+  margin-right: 3%;
+}
+.nulleImg{
+  max-width: 100%;
+  min-width: 100%;
+  margin-bottom: -2px;
 }
 .interconomy {
   height: 35px;
